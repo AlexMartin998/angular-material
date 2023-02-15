@@ -23,4 +23,8 @@ export class HeroesService {
         .pipe(catchError((err) => of(undefined))) // espera retornar 1 obs, x eso el   of()
     );
   }
+
+  getSuggestions(query: string): Observable<Hero[]> {
+    return this.http.get<Hero[]>(`${this.baseUrl}/heroes?q=${query}&_limit=6`);
+  }
 }
