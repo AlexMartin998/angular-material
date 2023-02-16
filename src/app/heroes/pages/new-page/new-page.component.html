@@ -1,4 +1,8 @@
-<h1>Heroe <small>Super</small></h1>
+<h1>
+  {{ currectHero.id ? "Edit" : "Create" }} Hero<span *ngIf="currectHero.id"
+    >: {{ currectHero.superhero }}</span
+  >
+</h1>
 <mat-divider class="mb-2"></mat-divider>
 
 <div class="grid">
@@ -52,9 +56,17 @@
         </form>
 
         <div class="flex justify-content-between">
-          <button mat-flat-button color="warn">
+          <button
+            *ngIf="currectHero.id"
+            (click)="onDeleteHero()"
+            mat-flat-button
+            color="warn"
+          >
             <mat-icon>delete</mat-icon> Delete
           </button>
+          <!-- para el flex -->
+          <span></span>
+
           <!-- lo llava onSubmit() xq esta fuera del formulario -->
           <button mat-flat-button color="primary" (click)="onSubmit()">
             <mat-icon>save</mat-icon> Save

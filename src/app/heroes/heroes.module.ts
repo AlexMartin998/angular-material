@@ -6,6 +6,7 @@ import { MaterialModule } from '../material/material.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
 
 import { CardComponent } from './componets/card/card.component';
+import { ConfirmDialogComponent } from './componets/confirm-dialag/confirm-dialag.component';
 import { LayoutComponent } from './layout/layout.component';
 import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
@@ -24,6 +25,7 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
 
     // pipes
     HeroImagePipe,
+    ConfirmDialogComponent,
   ],
   imports: [
     CommonModule,
