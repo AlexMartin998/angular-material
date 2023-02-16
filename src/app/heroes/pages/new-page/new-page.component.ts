@@ -7,7 +7,7 @@ import { HeroesService } from '../../services/heroes.service';
 import { filter, pipe, switchMap, tap } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialog } from '@angular/material/dialog';
-import { ConfirmDialogComponent } from '../../componets/confirm-dialag/confirm-dialag.component';
+import { ConfirmDialogComponent } from '../../components/confirm-dialag/confirm-dialag.component';
 
 @Component({
   selector: 'app-new-page',
